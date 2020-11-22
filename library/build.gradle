@@ -1,0 +1,21 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 30
+        versionCode 5
+        versionName "1.4"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            consumerProguardFiles 'proguard-rules.pro'
+        }
+    }
+    return true
+}
+
+apply from: './gradle-mvn-push.gradle'
